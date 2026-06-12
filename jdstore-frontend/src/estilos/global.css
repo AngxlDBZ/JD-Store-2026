@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: theme(fontFamily.texto);
+  background: theme(colors.oscuro);
+  color: theme(colors.claro);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100%;
+}
+
+* {
+  scrollbar-color: theme(colors.grisMedio) theme(colors.oscuro);
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+}
+
+img,
+video {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-fade-up {
+    animation: fadeUp 0.45s ease-out both;
+  }
+
+  .motion-fade-up-delay {
+    animation: fadeUp 0.6s 0.08s ease-out both;
+  }
+
+  .motion-soft-pop {
+    animation: softPop 0.35s ease-out both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.sin-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sin-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softPop {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .surface-panel {
+    border: 1px solid #2f2f30;
+    border-radius: 28px;
+    background: rgba(26, 26, 27, 0.72);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  }
+
+  .surface-soft {
+    border: 1px solid #2f2f30;
+    border-radius: 1rem;
+    background: rgba(22, 22, 23, 0.6);
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.24em] text-dorado/85;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-[1440px] px-4 sm:px-6 xl:px-8;
+  }
+
+  .content-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 720px;
+  }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skeleton-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    animation: skeletonShimmer 1.4s ease-in-out infinite;
+  }
+}
+
+@keyframes skeletonShimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
