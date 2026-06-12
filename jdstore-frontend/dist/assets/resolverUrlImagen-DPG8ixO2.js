@@ -1,0 +1,1 @@
+function e(e){if(!e)return``;if(typeof window>`u`)return e;try{let t=new URL(e,window.location.origin);return new Set([`127.0.0.1`,`localhost`,`jdstore.test`]).has(t.hostname)?`${window.location.origin}${t.pathname}`:t.toString()}catch{return e}}export{e as t};

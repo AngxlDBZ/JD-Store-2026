@@ -1,0 +1,1 @@
+import{l as e}from"./index-BQmVMhHE.js";async function t(){return(await e.get(`categorias`)).data}export{t};

@@ -1,0 +1,1 @@
+import{a as e}from"./index-BQmVMhHE.js";import{ApartadoAutenticacion as t}from"./IniciarSesion-ETnXNP0R.js";var n=e();function r(){return(0,n.jsx)(t,{modoInicial:`registro`})}export{r as Registro};

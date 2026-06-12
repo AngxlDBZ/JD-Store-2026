@@ -1,0 +1,1 @@
+import{l as e}from"./index-BQmVMhHE.js";async function t(t){return(await e.get(`inventario/sku/${encodeURIComponent(t)}`)).data}export{t};

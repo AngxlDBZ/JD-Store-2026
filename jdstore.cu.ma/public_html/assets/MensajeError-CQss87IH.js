@@ -1,0 +1,1 @@
+import{a as e}from"./index-BQmVMhHE.js";var t=e();function n({titulo:e=`Ocurrió un error`,detalle:n}){return(0,t.jsxs)(`div`,{className:`rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-left`,children:[(0,t.jsx)(`div`,{className:`font-semibold text-red-200`,children:e}),n?(0,t.jsx)(`div`,{className:`mt-1 text-sm text-red-200/70`,children:n}):null]})}export{n as t};

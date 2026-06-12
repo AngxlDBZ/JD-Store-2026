@@ -1,0 +1,1 @@
+import{a as e}from"./index-BQmVMhHE.js";var t=e();function n({titulo:e,valor:n}){return(0,t.jsxs)(`div`,{className:`surface-panel p-5`,children:[(0,t.jsx)(`div`,{className:`text-xs uppercase tracking-[0.2em] text-claro/45`,children:e}),(0,t.jsx)(`div`,{className:`mt-2 text-2xl font-semibold text-claro/90`,children:n})]})}export{n as t};

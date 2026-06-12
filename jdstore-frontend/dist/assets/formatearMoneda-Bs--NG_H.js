@@ -1,0 +1,1 @@
+function e(e){let t=typeof e==`number`?e:Number(e||0);return new Intl.NumberFormat(`es-CO`,{style:`currency`,currency:`COP`,maximumFractionDigits:0}).format(t)}export{e as t};
